@@ -1,3 +1,5 @@
+package transformations;
+
 public class NormalizeSpaceTransformation implements TextTransformation {
     @Override
     public String transform(String text) {

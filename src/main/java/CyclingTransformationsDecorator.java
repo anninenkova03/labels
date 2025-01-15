@@ -1,3 +1,5 @@
+import transformations.TextTransformation;
+
 import java.util.List;
 
 public class CyclingTransformationsDecorator extends LabelDecoratorBase{

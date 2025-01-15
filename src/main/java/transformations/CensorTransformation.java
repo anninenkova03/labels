@@ -1,3 +1,6 @@
+package transformations;
+
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -26,5 +29,18 @@ public class CensorTransformation implements TextTransformation{
         }
 
         return result;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CensorTransformation that = (CensorTransformation) o;
+        return Objects.equals(W, that.W);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(W);
     }
 }

@@ -1,3 +1,5 @@
+package transformations;
+
 public class LeftTrimTransformation implements TextTransformation {
     @Override
     public String transform(String text) {

@@ -1,3 +1,5 @@
+package transformations;
+
 public class DecorateTransformation implements TextTransformation {
     @Override
     public String transform(String text) {

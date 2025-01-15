@@ -1,3 +1,5 @@
+import transformations.TextTransformation;
+
 import java.util.List;
 import java.util.Random;
 
