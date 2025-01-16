@@ -1,3 +1,5 @@
+package labels;
+
 public class HelpLabel implements Label, HelpText {
     private final Label label;
     private final String helpText;

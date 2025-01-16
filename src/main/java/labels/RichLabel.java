@@ -1,3 +1,5 @@
+package labels;
+
 public class RichLabel implements Label {
     public String value;
     public String color;

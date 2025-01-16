@@ -1,3 +1,4 @@
+import labels.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -38,33 +39,33 @@ public class LabelPrinterTests {
 
     @Test
     public void testPrintSimpleLabel() {
-        Label simpleLabel = new SimpleLabel("Simple Label");
+        Label simpleLabel = new SimpleLabel("Simple labels.Label");
         LabelPrinter.print(simpleLabel);
-        assertSystemOutContains("Here is a label: Simple Label");
+        assertSystemOutContains("Here is a label: Simple labels.Label");
     }
 
     @Test
     public void testPrintRichLabel() {
-        Label richLabel = new RichLabel("Rich Label", "Violet", 12, "Calibri");
+        Label richLabel = new RichLabel("Rich labels.Label", "Violet", 12, "Calibri");
         LabelPrinter.print(richLabel);
-        assertSystemOutContains("Here is a label: Rich Label");
+        assertSystemOutContains("Here is a label: Rich labels.Label");
     }
 
     @Test
     public void testPrintProxyLabel() {
         ProxyLabel proxyLabel = new ProxyLabel(3);
-        simulateUserInput("Proxy Label\n");
+        simulateUserInput("Proxy labels.Label\n");
         LabelPrinter.print(proxyLabel);
-        assertSystemOutContains("Here is a label: Proxy Label");
+        assertSystemOutContains("Here is a label: Proxy labels.Label");
     }
 
     @Test
     public void testPrintWithHelpText() {
-        Label simpleLabel = new SimpleLabel("Label with Help");
+        Label simpleLabel = new SimpleLabel("labels.Label with Help");
         HelpLabel helpLabel = new HelpLabel(simpleLabel, "Detailed help information");
 
         LabelPrinter.printWithHelpText(helpLabel);
-        assertSystemOutContains("Here is a label: Label with Help");
+        assertSystemOutContains("Here is a label: labels.Label with Help");
         assertSystemOutContains("Some help information about this label: Detailed help information");
     }
 
@@ -72,11 +73,11 @@ public class LabelPrinterTests {
     public void testPrintWithHelpTextForProxyLabel() {
         ProxyLabel proxyLabel = new ProxyLabel(2);
 
-        simulateUserInput("Proxy Label with Help\n");
+        simulateUserInput("Proxy labels.Label with Help\n");
         HelpLabel helpLabel = new HelpLabel(proxyLabel, "Help for proxy label");
 
         LabelPrinter.printWithHelpText(helpLabel);
-        assertSystemOutContains("Here is a label: Proxy Label with Help");
+        assertSystemOutContains("Here is a label: Proxy labels.Label with Help");
         assertSystemOutContains("Some help information about this label: Help for proxy label");
     }
 }

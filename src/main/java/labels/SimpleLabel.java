@@ -1,4 +1,6 @@
-class SimpleLabel implements Label {
+package labels;
+
+public class SimpleLabel implements Label {
     public String value;
 
     public SimpleLabel(String value) {

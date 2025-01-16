@@ -1,3 +1,8 @@
+import decorators.CyclingTransformationsDecorator;
+import decorators.RandomTransformationDecorator;
+import decorators.TextTransformationDecorator;
+import labels.Label;
+import labels.SimpleLabel;
 import org.junit.Test;
 import transformations.*;
 import java.util.List;
@@ -51,9 +56,9 @@ public class DecoratorTests {
     public void testChainingRandomAndCyclingDecorators() {
         Label label = new SimpleLabel("  hello world  ");
         List<TextTransformation> transformations = List.of(
-                new LeftTrimTransformation(),
+                new RightTrimTransformation(),
                 new CapitalizeTransformation(),
-                new RightTrimTransformation()
+                new LeftTrimTransformation()
         );
 
         Label randomAndCyclingLabel = new CyclingTransformationsDecorator(

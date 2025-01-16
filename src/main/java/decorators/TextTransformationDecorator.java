@@ -1,5 +1,7 @@
-import transformations.TextTransformation;
+package decorators;
 
+import labels.Label;
+import transformations.TextTransformation;
 import java.util.Objects;
 
 public class TextTransformationDecorator extends LabelDecoratorBase {

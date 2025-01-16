@@ -1,3 +1,5 @@
+import labels.RichLabel;
+import labels.SimpleLabel;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -6,8 +8,8 @@ public class LabelTests {
 
     @Test
     public void testSimpleLabelProperties() {
-        SimpleLabel simpleLabel = new SimpleLabel("Test Simple Label");
-        assertEquals("Test Simple Label", simpleLabel.getText());
+        SimpleLabel simpleLabel = new SimpleLabel("Test Simple labels.Label");
+        assertEquals("Test Simple labels.Label", simpleLabel.getText());
     }
 
     @Test

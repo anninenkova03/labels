@@ -1,7 +1,9 @@
+package labels;
+
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
 
-class ProxyLabel implements Label {
+public class ProxyLabel implements Label {
     private Label realLabel;
     private String cachedText = null;
     private final int timeout;
