@@ -1,9 +1,30 @@
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
+
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
+import java.io.PrintStream;
+
 import static org.junit.Assert.assertEquals;
 
 public class ProxyLabelTests {
+
+    private final PrintStream originalOut = System.out;
+    private final InputStream originalIn = System.in;
+
+    @Before
+    public void setUp() {
+        ByteArrayOutputStream testOut = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(testOut));
+    }
+
+    @After
+    public void tearDown() {
+        System.setOut(originalOut);
+        System.setIn(originalIn);
+    }
 
     private void simulateUserInput(String input) {
         InputStream in = new ByteArrayInputStream(input.getBytes());
