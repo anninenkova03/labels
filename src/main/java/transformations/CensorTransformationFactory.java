@@ -1,8 +1,9 @@
+package transformations;
+
 import java.util.HashMap;
 import java.util.Map;
-import transformations.*;
 
-class CensorTransformationFactory {
+public class CensorTransformationFactory {
     private final Map<String, TextTransformation> flyweightCache = new HashMap<>();
 
     public TextTransformation getTextTransformation(String W) {
